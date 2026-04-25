@@ -4,7 +4,8 @@
   "description": "Brave Search MCP Server deployed on Railway",
   "type": "module",
   "scripts": {
-    "start": "npx -y @brave/brave-search-mcp-server --brave-api-key 'BSAo9PZ_ZHo0eCes5pDtpP_mqUgxF4w' --transport http --port ${PORT:-8080} --host 0.0.0.0"
+    "start": "npx -y @brave/brave-search-mcp-server --transport http --port ${PORT:-8080} --host 0.0.0.0",
+    "start:local": "BRAVE_API_KEY='BSAo9PZ_ZHo0eCes5pDtpP_mqUgxF4w' npx -y @brave/brave-search-mcp-server --transport http --port 8080 --host 0.0.0.0"
   },
   "dependencies": {}
 }
